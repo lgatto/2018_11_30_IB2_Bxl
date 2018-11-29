@@ -1,0 +1,7 @@
+1. use case intro, until how data looks like
+2. then MSnSet structure
+3. demo showing PCA with markers
+4. PCA with classification results
+5. slides TAGM
+6. optional transfer learning
+7. software and open research

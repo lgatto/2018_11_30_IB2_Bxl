@@ -14,5 +14,8 @@ present some computational discoveries and developments that helped
 putting protein sub-cellular localisation experiments under a new
 light, and demonstrate the existing software.
 
+Get the slides [here (pdf)](https://raw.githack.com/lgatto/2018_11_30_IB2_Bxl/master/slides.pdf).
 
-Get the slides [here (pdf)](https://raw.githack.com/lgatto/2018_11_30_IB2_Bxl/master/slides.pdf)
+Citation: Gatto, Laurent. (2018, November). Probabilistic modelling of
+protein sub-cellular
+localisation. Zenodo. http://doi.org/10.5281/zenodo.1741206

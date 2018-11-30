@@ -37,7 +37,7 @@
 \begin{frame}
   \begin{figure}[h]
     \centering
-    \includegraphics[width=.8\linewidth]{./figs_local/g.png}
+    \includegraphics[width=.8\linewidth]{./figs/g.png}
     \caption{\textbf{Collaboration between packages}: Dependency graph
       containing 41 MS and proteomics-tagged packages (out of 100+)
       and their dependencies. }
@@ -48,7 +48,7 @@
 
   \begin{figure}[h]
     \centering
-    \includegraphics[width=.8\linewidth]{./Figures/msnbase-contributors-2.png}
+    \includegraphics[width=.8\linewidth]{./figs/msnbase-contributors-2.png}
     \caption{\textbf{Collaboration within packages}: Contributions to the
       \texttt{MSnbase} package (1220 downloads from unique IP
       addresses in January 2018) since its creation, the last one
@@ -63,7 +63,7 @@
 \begin{frame}{Open research: open source software}
   \centering
   \begin{figure}
-  \includegraphics[width=.8\linewidth]{./figs_local/pRoloc_screen.png}
+  \includegraphics[width=.8\linewidth]{./figs/pRoloc_screen.png}
     \caption{Public repository for the \texttt{pRoloc} software
       \url{https://github.com/lgatto/pRoloc}.}
   \end{figure}
@@ -72,7 +72,7 @@
 \begin{frame}{Open and reproducible research}
   \centering
   \begin{figure}
-    \includegraphics[width=1\linewidth]{./figs_local/qsep_screen.png}
+    \includegraphics[width=1\linewidth]{./figs/qsep_screen.png}
     \caption{\url{https://github.com/lgatto/QSep-manuscript} and
       \url{https://doi.org/10.1101/377630} \citep{Gatto:2018}. In
       press in \textit{Current Opinions in Chemical Biology} now.}

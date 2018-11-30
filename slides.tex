@@ -1,0 +1,259 @@
+\documentclass[presentation]{beamer}
+
+\usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+% \usepackage{longtable}
+% \usepackage{tabu}
+\usepackage{makecell}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+% \usepackage{textcomp}
+% \usepackage{marvosym}
+% \usepackage{wasysym}
+% \usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+
+
+\usepackage{bm}
+
+\usepackage{amsmath,amssymb}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\by}{\mathbf{y}}
+
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbN}{\mathbb{N}}
+
+\newcommand{\bxi}{\bm{\xi}}
+\newcommand{\bal}{\bm{\alpha}}
+\newcommand{\bth}{\bm{\theta}}
+
+\usepackage{etoolbox}
+\let\bbordermatrix\bordermatrix
+\patchcmd{\bbordermatrix}{8.75}{4.75}{}{}
+\patchcmd{\bbordermatrix}{\left(}{\left[}{}{}
+\patchcmd{\bbordermatrix}{\right)}{\right]}{}{}
+
+\usepackage[authoryear, round]{natbib}
+
+\newcommand{\sidebysidecaption}[4]{%
+\RaggedRight%
+  \begin{minipage}[t]{#1}
+    \vspace*{0pt}
+    #3
+  \end{minipage}
+  \hfill%
+  \begin{minipage}[t]{#2}
+    \vspace*{0pt}
+    #4
+\end{minipage}%
+}
+
+%% colors
+\definecolor{Red}{rgb}{0.7,0,0}
+\definecolor{Blue}{rgb}{0,0,0.8}
+\definecolor{Green}{rgb}{0,0.8,0}
+\definecolor{Gray}{rgb}{0.8,0.8,0.8}
+\definecolor{Orange}{rgb}{1,.65,0}
+
+\usepackage{hyperref}
+\hypersetup{
+  hyperindex = {true},
+  colorlinks = {true},
+  linktocpage = {true},
+  plainpages = {false},
+  linkcolor = {Blue},
+  citecolor = {Blue},
+  urlcolor = {Red},
+  pdfstartview = {Fit},
+  pdfpagemode = {UseOutlines},
+  pdfview = {XYZ null null null},
+  pdfkeywords={proteomics, spatial, dynamics, integration, regulation, computational biology},
+  pdfsubject={Research talk},
+  pdfcreator={Laurent Gatto}}
+
+%% knitr
+
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+
+
+\date{30 November 2018\\ Interuniversity Institute of Bioinformatics in Brussels}
+
+\title{Probabilistic modelling of protein sub-cellular localisation}
+
+\author{Laurent Gatto\\
+  \url{laurent.gatto@uclouvain.be}\\
+  de Duve Institute -- \textbf{UCLouvain}
+}
+
+
+% \AtBeginSection[] % Do nothing for \section*
+% {
+%   \begin{frame}<beamer>
+%     \frametitle{Plan}
+%     \tableofcontents[currentsection]
+%   \end{frame}
+% }
+
+
+\begin{document}
+
+\maketitle
+
+% \begin{frame}{}
+%   Who?
+% \end{frame}
+
+\begin{frame}{Abstract}
+  Computational sciences can be and extremely valuable, or arguably
+  essential, when exploring large and complex bio-medical data. In my
+  presentation, I will illustrate this claim using examples from my
+  work on protein sub-cellular localisation using mass spectrometry. I
+  will present some computational discoveries and developments that
+  helped putting protein sub-cellular localisation experiments under a
+  new light, and illustrate the evolution and challenges of some of
+  these developments.
+\end{frame}
+
+\begin{frame}
+  \begin{block}{}
+  \begin{enumerate}
+  \item \textbf{Use case}: spatial proteomics.
+  \item Novel \textbf{computational biology research and developments}
+    to acquire reliable biological knowledge.
+  \item \textbf{Behind the scenes}: software/data structures and open research
+    practice.
+  \end{enumerate}
+  \end{block}
+\end{frame}
+
+
+\include{spatprot}
+
+\include{sw}
+
+
+\begin{frame}[fragile]{Conclusions}
+  \begin{itemize}
+
+  \item Protein sub-cellular localisation: technologies (hyperLOPIT)
+    and opportunities.
+
+  \item Reliance on computational biology and dedicated software
+    (\texttt{pRoloc} \textit{et al.}) to interpret data and acquire
+    biological knowledge.
+
+  \item Rigorous computational infrastructure and sound data analysis
+    and interpretation is a \textbf{long term investment}.
+
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]{References}
+  \tiny
+  \bibliographystyle{plainnat}
+  \bibliography{spatial_proteomics,bib2}
+\end{frame}
+
+
+\begin{frame}
+  \begin{block}{Acknowledgements}
+    \begin{itemize}
+    \item \textbf{Mr Oliver Crook} and \textbf{Dr Lisa Breckels},
+      Computational Proteomics Unit, Cambridge (machine learning,
+      algorithms, software).
+    \item \textbf{Dr Sebastian Gibb} and \textbf{Dr Johannes Rainer}
+      (software).
+    \item \textbf{Prof Kathryn Lilley} \textit{et al.}, Cambridge
+      Centre of Proteomics and \textbf{Dr Claire Mulvey}, Cancer
+      Research UK Cambridge Institute (spatial proteomics)
+    \item \textbf{Funding}: BBSRC, Wellcome Trust
+    \end{itemize}
+  \end{block}
+
+
+
+  \begin{center}
+    \textbf{Thank you for your attention}
+  \end{center}
+
+\end{frame}
+
+%% \include{add}
+
+\end{document}

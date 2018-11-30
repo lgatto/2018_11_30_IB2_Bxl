@@ -13,3 +13,6 @@ on protein sub-cellular localisation using mass spectrometry. I will
 present some computational discoveries and developments that helped
 putting protein sub-cellular localisation experiments under a new
 light, and demonstrate the existing software.
+
+
+Get the slides [here (pdf)](https://raw.githack.com/lgatto/2018_11_30_IB2_Bxl/master/slides.pdf)

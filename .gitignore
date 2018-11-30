@@ -1,0 +1,10 @@
+*.aux
+slides.bbl
+slides.blg
+slides.log
+slides.nav
+slides.out
+slides.pdf
+slides.snm
+slides.toc
+slides.vrb
